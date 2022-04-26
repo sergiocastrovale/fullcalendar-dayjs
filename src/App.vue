@@ -28,6 +28,8 @@ import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import dayjsPlugin from './helpers/day'
+
 import CalendarSidebar from './CalendarSidebar.vue'
 
 export default {
@@ -51,7 +53,7 @@ export default {
         dayMaxEvents: true,
         events: this.events,
         weekends: this.weekendsVisible,
-        plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+        plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, dayjsPlugin],
         headerToolbar: {
           left: 'prev,next today',
           center: 'title',
